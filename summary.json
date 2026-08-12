@@ -1,143 +1,143 @@
 {
   "date": "2026-08-12",
   "total_su": 17,
-  "total_checks": 204,
-  "total_empty": 36,
-  "rate": 0.8191,
-  "updated": "2026-08-12 11:19",
+  "total_checks": 221,
+  "total_empty": 38,
+  "rate": 0.8224,
+  "updated": "2026-08-12 11:51",
   "summary": [
     {
       "name": "麻豪口",
-      "checks": 12,
-      "person_checks": 5,
+      "checks": 13,
+      "person_checks": 6,
       "empty_checks": 7,
       "offline": 0,
-      "duty_rate": 0.4166666666666667
+      "duty_rate": 0.46153846153846156
     },
     {
       "name": "胡厂",
-      "checks": 12,
-      "person_checks": 11,
+      "checks": 13,
+      "person_checks": 12,
       "empty_checks": 1,
       "offline": 0,
-      "duty_rate": 0.9166666666666666
+      "duty_rate": 0.9230769230769231
     },
     {
       "name": "孟家溪",
-      "checks": 12,
+      "checks": 13,
       "person_checks": 11,
       "empty_checks": 1,
-      "offline": 0,
+      "offline": 1,
       "duty_rate": 0.9166666666666666
     },
     {
       "name": "甘厂",
-      "checks": 12,
-      "person_checks": 8,
+      "checks": 13,
+      "person_checks": 9,
       "empty_checks": 4,
       "offline": 0,
-      "duty_rate": 0.6666666666666666
+      "duty_rate": 0.6923076923076923
     },
     {
       "name": "藕池",
-      "checks": 12,
-      "person_checks": 11,
+      "checks": 13,
+      "person_checks": 12,
       "empty_checks": 1,
       "offline": 0,
-      "duty_rate": 0.9166666666666666
+      "duty_rate": 0.9230769230769231
     },
     {
       "name": "城供",
-      "checks": 12,
-      "person_checks": 11,
+      "checks": 13,
+      "person_checks": 12,
       "empty_checks": 1,
       "offline": 0,
-      "duty_rate": 0.9166666666666666
+      "duty_rate": 0.9230769230769231
     },
     {
       "name": "北闸",
-      "checks": 12,
-      "person_checks": 9,
+      "checks": 13,
+      "person_checks": 10,
       "empty_checks": 3,
       "offline": 0,
-      "duty_rate": 0.75
+      "duty_rate": 0.7692307692307693
     },
     {
       "name": "黄山",
-      "checks": 12,
+      "checks": 13,
       "person_checks": 3,
-      "empty_checks": 9,
+      "empty_checks": 10,
       "offline": 0,
-      "duty_rate": 0.25
+      "duty_rate": 0.23076923076923078
     },
     {
       "name": "闸口",
-      "checks": 12,
+      "checks": 13,
       "person_checks": 4,
-      "empty_checks": 8,
+      "empty_checks": 9,
       "offline": 0,
-      "duty_rate": 0.3333333333333333
+      "duty_rate": 0.3076923076923077
     },
     {
       "name": "狮子口",
-      "checks": 12,
-      "person_checks": 12,
+      "checks": 13,
+      "person_checks": 13,
       "empty_checks": 0,
       "offline": 0,
       "duty_rate": 1.0
     },
     {
       "name": "玉湖",
-      "checks": 12,
-      "person_checks": 12,
+      "checks": 13,
+      "person_checks": 13,
       "empty_checks": 0,
       "offline": 0,
       "duty_rate": 1.0
     },
     {
       "name": "夹竹园",
-      "checks": 12,
+      "checks": 13,
       "person_checks": 7,
       "empty_checks": 0,
-      "offline": 5,
+      "offline": 6,
       "duty_rate": 1.0
     },
     {
       "name": "南平",
-      "checks": 12,
-      "person_checks": 12,
+      "checks": 13,
+      "person_checks": 13,
       "empty_checks": 0,
       "offline": 0,
       "duty_rate": 1.0
     },
     {
       "name": "东港",
-      "checks": 12,
-      "person_checks": 12,
+      "checks": 13,
+      "person_checks": 13,
       "empty_checks": 0,
       "offline": 0,
       "duty_rate": 1.0
     },
     {
       "name": "杨家厂",
-      "checks": 12,
-      "person_checks": 12,
+      "checks": 13,
+      "person_checks": 13,
       "empty_checks": 0,
       "offline": 0,
       "duty_rate": 1.0
     },
     {
       "name": "章庄",
-      "checks": 12,
-      "person_checks": 11,
+      "checks": 13,
+      "person_checks": 12,
       "empty_checks": 1,
       "offline": 0,
-      "duty_rate": 0.9166666666666666
+      "duty_rate": 0.9230769230769231
     },
     {
       "name": "斗湖堤",
-      "checks": 12,
-      "person_checks": 12,
+      "checks": 13,
+      "person_checks": 13,
       "empty_checks": 0,
       "offline": 0,
       "duty_rate": 1.0
