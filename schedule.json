@@ -1,0 +1,16 @@
+{
+  "day": {
+    "start_hour": 8,
+    "end_hour": 18,
+    "interval_hours": 1
+  },
+  "night": {
+    "interval_hours": 2
+  },
+  "random_minute_range": [
+    0,
+    25
+  ],
+  "report_time": "08:00",
+  "report_previous_days": 1
+}
