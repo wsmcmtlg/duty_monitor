@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>公安供电所值班监控 · 查询中心</title>
+<style>
+  :root{--primary:#1F4E79;--primary-light:#2E75B6;--bg:#f0f4f8;--card:#fff;--text:#2c3e50;--muted:#7f8c8d;--ok:#27ae60;--warn:#e67e22;--bad:#c0392b;--border:#dfe6ec;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"Microsoft YaHei",system-ui,sans-serif;background:var(--bg);color:var(--text);}
+  .header{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;padding:20px 24px;}
+  .header h1{font-size:22px;font-weight:600;}
+  .header p{font-size:13px;opacity:.85;margin-top:5px;}
+  .wrap{max-width:1000px;margin:24px auto;padding:0 16px;}
+  .card{background:var(--card);border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:20px;margin-bottom:18px;}
+  .card h2{font-size:16px;color:var(--primary);border-left:4px solid var(--primary-light);padding-left:10px;margin-bottom:14px;}
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  th,td{padding:10px 12px;text-align:center;border-bottom:1px solid var(--border);}
+  th{color:var(--muted);font-weight:500;background:#f8fafc;}
+  .st{display:inline-block;padding:3px 10px;border-radius:10px;font-size:12px;}
+  .st.ok{background:#e8f8ef;color:var(--ok);}.st.warn{background:#fdf3e7;color:var(--warn);}
+  .report-link{display:block;padding:10px 14px;border:1px solid var(--border);border-radius:8px;margin-bottom:8px;text-decoration:none;color:var(--text);background:#fafbfc;}
+  .report-link:hover{border-color:var(--primary-light);background:#f0f6fc;}
+  .report-link .name{font-size:14px;font-weight:500;}
+  .report-link .meta{font-size:12px;color:var(--muted);margin-top:3px;}
+  .empty{color:var(--muted);font-size:13px;padding:14px 0;text-align:center;}
+  .sum{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .s{flex:1;min-width:140px;background:#f8fafc;border:1px solid var(--border);border-radius:8px;padding:12px;text-align:center;}
+  .s .n{font-size:24px;font-weight:700;color:var(--primary);}
+  .s .l{font-size:12px;color:var(--muted);margin-top:3px;}
+  .foot{text-align:center;color:var(--muted);font-size:12px;padding:20px 0;}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>国网公安县供电公司 · 供电所值班监控查询中心</h1>
+  <p>数据由本地值班监控系统自动采集更新 · 每日自动同步</p>
+</div>
+<div class="wrap">
+  <div class="card">
+    <h2>总体情况</h2>
+    <div class="sum">
+      <div class="s"><div class="n" id="suTotal">-</div><div class="l">供电所数</div></div>
+      <div class="s"><div class="n" id="suChecks">-</div><div class="l">累计查岗</div></div>
+      <div class="s"><div class="n" id="suEmpty">-</div><div class="l">累计无人</div></div>
+      <div class="s"><div class="n" id="suRate">-</div><div class="l">整体在岗率</div></div>
+      <div class="s"><div class="n" id="suDate">-</div><div class="l">更新日期</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>各供电所查岗统计</h2>
+    <div id="tableWrap"><div class="empty">加载中...</div></div>
+  </div>
+
+  <div class="card">
+    <h2>值班报告</h2>
+    <div id="reportWrap"><div class="empty">加载中...</div></div>
+  </div>
+</div>
+<div class="foot">供电所值班监控系统 · 数据每日同步更新</div>
+
+<script>
+async function load(){
+  try{
+    const r=await fetch('summary.json?t='+Date.now());
+    if(!r.ok) throw 0;
+    const d=await r.json();
+    document.title='公安供电所值班监控 · '+d.date;
+    document.getElementById('suTotal').textContent=d.total_su || '-';
+    document.getElementById('suChecks').textContent=d.total_checks || '-';
+    document.getElementById('suEmpty').textContent=d.total_empty || '-';
+    document.getElementById('suRate').textContent=(d.rate!=null? (d.rate*100).toFixed(1)+'%' : '-');
+    document.getElementById('suDate').textContent=d.date || '-';
+    // 表格
+    const rows=d.summary||[];
+    let h='<table><tr><th>供电所</th><th>查岗</th><th>在岗</th><th>无人</th><th>离线</th><th>在岗率</th><th>状态</th></tr>';
+    rows.forEach(a=>{
+      const r=a.duty_rate!=null? (a.duty_rate*100).toFixed(1)+'%' : '-';
+      const st = a.empty_checks>0 ? '<span class="st warn">有无人</span>' : '<span class="st ok">正常</span>';
+      h+=`<tr><td>${a.name}</td><td>${a.checks}</td><td>${a.person_checks}</td><td>${a.empty_checks}</td><td>${a.offline}</td><td>${r}</td><td>${st}</td></tr>`;
+    });
+    document.getElementById('tableWrap').innerHTML = rows.length? h : '<div class="empty">暂无统计数据</div>';
+    // 报告
+    const reps=d.reports||[];
+    let rh='';
+    reps.forEach(f=>{ rh+=`<a class="report-link" href="${f.file}" download><div class="name">${f.name}</div><div class="meta">${f.size} KB · ${f.mtime}</div></a>`; });
+    document.getElementById('reportWrap').innerHTML = reps.length? rh : '<div class="empty">暂无报告</div>';
+  }catch(e){
+    document.getElementById('tableWrap').innerHTML='<div class="empty">数据加载失败或尚未同步</div>';
+    document.getElementById('reportWrap').innerHTML='<div class="empty">暂无报告</div>';
+  }
+}
+load();
+</script>
+</body>
+</html>
