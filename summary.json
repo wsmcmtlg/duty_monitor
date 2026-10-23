@@ -1,149 +1,155 @@
 {
-  "date": "2026-10-21",
+  "date": "2026-10-22",
   "total_su": 17,
-  "total_checks": 408,
-  "total_empty": 105,
-  "rate": 0.7426,
-  "updated": "2026-10-22 08:00",
+  "total_checks": 510,
+  "total_empty": 151,
+  "rate": 0.7033,
+  "updated": "2026-10-23 08:00",
   "summary": [
     {
       "name": "麻豪口",
-      "checks": 24,
-      "person_checks": 7,
-      "empty_checks": 17,
+      "checks": 30,
+      "person_checks": 3,
+      "empty_checks": 27,
       "offline": 0,
-      "duty_rate": 0.2916666666666667
+      "duty_rate": 0.1
     },
     {
       "name": "胡厂",
-      "checks": 24,
-      "person_checks": 13,
+      "checks": 30,
+      "person_checks": 19,
       "empty_checks": 11,
       "offline": 0,
-      "duty_rate": 0.5416666666666666
+      "duty_rate": 0.6333333333333333
     },
     {
       "name": "孟家溪",
-      "checks": 24,
-      "person_checks": 24,
+      "checks": 30,
+      "person_checks": 30,
       "empty_checks": 0,
       "offline": 0,
       "duty_rate": 1.0
     },
     {
       "name": "甘厂",
-      "checks": 24,
-      "person_checks": 24,
-      "empty_checks": 0,
+      "checks": 30,
+      "person_checks": 20,
+      "empty_checks": 10,
       "offline": 0,
-      "duty_rate": 1.0
+      "duty_rate": 0.6666666666666666
     },
     {
       "name": "藕池",
-      "checks": 24,
-      "person_checks": 24,
+      "checks": 30,
+      "person_checks": 30,
       "empty_checks": 0,
       "offline": 0,
       "duty_rate": 1.0
     },
     {
       "name": "城供",
-      "checks": 24,
-      "person_checks": 18,
-      "empty_checks": 6,
+      "checks": 30,
+      "person_checks": 25,
+      "empty_checks": 5,
       "offline": 0,
-      "duty_rate": 0.75
+      "duty_rate": 0.8333333333333334
     },
     {
       "name": "北闸",
-      "checks": 24,
-      "person_checks": 16,
-      "empty_checks": 8,
+      "checks": 30,
+      "person_checks": 21,
+      "empty_checks": 9,
       "offline": 0,
-      "duty_rate": 0.6666666666666666
+      "duty_rate": 0.7
     },
     {
       "name": "黄山",
-      "checks": 24,
-      "person_checks": 5,
-      "empty_checks": 19,
+      "checks": 30,
+      "person_checks": 7,
+      "empty_checks": 23,
       "offline": 0,
-      "duty_rate": 0.20833333333333334
+      "duty_rate": 0.23333333333333334
     },
     {
       "name": "闸口",
-      "checks": 24,
-      "person_checks": 21,
-      "empty_checks": 3,
+      "checks": 30,
+      "person_checks": 17,
+      "empty_checks": 13,
       "offline": 0,
-      "duty_rate": 0.875
+      "duty_rate": 0.5666666666666667
     },
     {
       "name": "狮子口",
-      "checks": 24,
-      "person_checks": 24,
+      "checks": 30,
+      "person_checks": 29,
       "empty_checks": 0,
-      "offline": 0,
+      "offline": 1,
       "duty_rate": 1.0
     },
     {
       "name": "玉湖",
-      "checks": 24,
-      "person_checks": 24,
+      "checks": 30,
+      "person_checks": 30,
       "empty_checks": 0,
       "offline": 0,
       "duty_rate": 1.0
     },
     {
       "name": "夹竹园",
-      "checks": 24,
-      "person_checks": 19,
-      "empty_checks": 5,
-      "offline": 0,
-      "duty_rate": 0.7916666666666666
-    },
-    {
-      "name": "南平",
-      "checks": 24,
-      "person_checks": 24,
+      "checks": 30,
+      "person_checks": 30,
       "empty_checks": 0,
       "offline": 0,
       "duty_rate": 1.0
     },
     {
-      "name": "东港",
-      "checks": 24,
-      "person_checks": 23,
-      "empty_checks": 1,
+      "name": "南平",
+      "checks": 30,
+      "person_checks": 16,
+      "empty_checks": 14,
       "offline": 0,
-      "duty_rate": 0.9583333333333334
+      "duty_rate": 0.5333333333333333
+    },
+    {
+      "name": "东港",
+      "checks": 30,
+      "person_checks": 30,
+      "empty_checks": 0,
+      "offline": 0,
+      "duty_rate": 1.0
     },
     {
       "name": "杨家厂",
-      "checks": 24,
-      "person_checks": 1,
-      "empty_checks": 23,
+      "checks": 30,
+      "person_checks": 4,
+      "empty_checks": 26,
       "offline": 0,
-      "duty_rate": 0.041666666666666664
+      "duty_rate": 0.13333333333333333
     },
     {
       "name": "章庄",
-      "checks": 24,
-      "person_checks": 24,
+      "checks": 30,
+      "person_checks": 30,
       "empty_checks": 0,
       "offline": 0,
       "duty_rate": 1.0
     },
     {
       "name": "斗湖堤",
-      "checks": 24,
-      "person_checks": 12,
-      "empty_checks": 12,
+      "checks": 30,
+      "person_checks": 17,
+      "empty_checks": 13,
       "offline": 0,
-      "duty_rate": 0.5
+      "duty_rate": 0.5666666666666667
     }
   ],
   "reports": [
+    {
+      "name": "供电所值班情况明细_2026-10-22.xlsx",
+      "size": 19.7,
+      "mtime": "2026-10-23 08:00",
+      "file": "reports/供电所值班情况明细_2026-10-22.xlsx"
+    },
     {
       "name": "供电所值班情况明细_2026-10-21_临时巡视.xlsx",
       "size": 7.5,
@@ -271,6 +277,12 @@
       "file": "reports/供电所值班情况明细_2026-08-11.xlsx"
     },
     {
+      "name": "供电所值班情况报告_2026-10-22.docx",
+      "size": 8063.5,
+      "mtime": "2026-10-23 08:00",
+      "file": "reports/供电所值班情况报告_2026-10-22.docx"
+    },
+    {
       "name": "供电所值班情况报告_2026-10-21_临时巡视.docx",
       "size": 285.7,
       "mtime": "2026-10-21 08:28",
@@ -311,18 +323,6 @@
       "size": 6843.1,
       "mtime": "2026-08-25 08:00",
       "file": "reports/供电所值班情况报告_2026-08-24.docx"
-    },
-    {
-      "name": "供电所值班情况报告_2026-08-23.docx",
-      "size": 5428.7,
-      "mtime": "2026-08-24 08:00",
-      "file": "reports/供电所值班情况报告_2026-08-23.docx"
-    },
-    {
-      "name": "供电所值班情况报告_2026-08-22.docx",
-      "size": 5940.6,
-      "mtime": "2026-08-23 08:00",
-      "file": "reports/供电所值班情况报告_2026-08-22.docx"
     }
   ]
 }
